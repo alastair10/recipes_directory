@@ -46,6 +46,5 @@ class RecipesRepository
 
     return recipe
 
-    # Returns a single Student object.
   end
 end

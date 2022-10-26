@@ -19,4 +19,6 @@ recipe = recipes_repository.find(1)
 puts recipe.name # => 'Pizza'
 
 recipe = recipes_repository.find(2)
+puts recipe.name # => 'Feta Salad'
+puts recipe.rating # => '5'
 puts recipe.cooking_time # => '90'
