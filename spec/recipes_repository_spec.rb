@@ -20,4 +20,25 @@ describe RecipesRepository do
     expect(recipes.first.id).to eq('1')
     expect(recipes.last.name).to eq('Feta Salad')
   end
+
+  it "returns a single Pizza recipe" do
+    repo = RecipesRepository.new
+
+    recipes = repo.find(1)
+    expect(recipes.name).to eq('Pizza')
+    expect(recipes.cooking_time).to eq('30')
+    expect(recipes.rating).to eq('2')
+  end
+
+
+    # # 3
+    # # Get another single recipe
+  it "returns a single recipe Feta Salad" do
+    repo = RecipesRepository.new
+
+    recipes = repo.find(2)
+    expect(recipes.name).to eq('Feta Salad')
+    expect(recipes.cooking_time).to eq('90')
+    expect(recipes.rating).to eq('5')
+  end
 end

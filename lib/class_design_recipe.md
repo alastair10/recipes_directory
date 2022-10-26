@@ -150,28 +150,34 @@ recipes.first.id # => 1
 recipes.last.name # => 'Feta Salad'
 
 # 2
-# Get a single student
+# Get a single recipe
 
-repo = StudentRepository.new
+repo = RecipesRepository.new
 
-student = repo.find(1)
+ recipes = repo.find(1)
+ recipes.name # => 'Pizza'
+ recipes.cooking_time # => '30'
+ recipes.rating # => 2
 
-student.id # =>  1
-student.name # =>  'David'
-student.cohort_name # =>  'April 2022'
+# # 3
+# # Get another single recipe
 
-# Add more examples for each method
-```
+ repo = RecipesRepository.new
+
+ recipes = repo.find(2)
+ recipes.name # => 'Feta Salad'
+ recipes.cooking_time # => '90'
+ recipes.rating # =>5
 
 Encode this example as a test.
 
-## 7. Reload the SQL seeds before each test run
+ 7. Reload the SQL seeds before each test run
 
-Running the SQL code present in the seed file will empty the table and re-insert the seed data.
+  Running the SQL code present in the seed file will empty the table and re-insert the seed data.
 
-This is so you get a fresh table contents every time you run the test suite.
+  This is so you get a fresh table contents every time you run the test suite.
 
-```ruby
+ruby
 # EXAMPLE
 
 # file: spec/student_repository_spec.rb
